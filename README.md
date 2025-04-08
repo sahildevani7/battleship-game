@@ -4,9 +4,7 @@ A real-time multiplayer Battleship game implementation using Node.js, Express, a
 
 ## Demo
 
-![Demo Video](demo.mp4)
-
-## Documentation
+https://github.com/user-attachments/assets/6f6a17b1-f4e1-4e19-ae7b-9969848f55de
 
 [Project Report](Report.pdf)
 
