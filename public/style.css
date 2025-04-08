@@ -1,0 +1,371 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto 20px;
+  margin-bottom: 10px;
+  color: #333;
+  background-color: #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+h3 {
+  display: inline-block;
+}
+
+
+.battleship-grid {
+  margin: 2vmin;
+  display: grid;
+  background-color: lightcoral;
+  grid-template-rows: repeat(10, 6vmin);
+  grid-template-columns: repeat(10, 6vmin);
+}
+
+.battleship-grid div {
+  border: 1px solid white;
+}
+
+.grid-display {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin: 20px auto;
+  background-color: #3498db;
+  border: 2px solid grey;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.grid-display:hover {
+  background-color: #2980b9;
+}
+
+.ship {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #2ecc71;
+  cursor: pointer;
+}
+
+.ship:hover {
+  background-color: gold;
+}
+
+.destroyer-container {
+  width: 80px;
+  height: 40px;
+  background-color: coral;
+  margin: 10px;
+  display: flex;
+}
+
+.destroyer-container-vertical {
+  width: 40px;
+  height: 80px;
+  background-color: coral;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.submarine-container {
+  width: 120px;
+  height: 40px;
+  background-color: lightpink;
+  margin: 10px;
+  display: flex;
+}
+
+.submarine-container-vertical {
+  width: 40px;
+  height: 120px;
+  background-color: lightpink;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cruiser-container {
+  width: 120px;
+  height: 40px;
+  background-color: orchid;
+  margin: 10px;
+  display: flex;
+}
+
+.cruiser-container-vertical {
+  width: 40px;
+  height: 120px;
+  background-color: orchid;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.battleship-container {
+  width: 160px;
+  height: 40px;
+  background-color: turquoise;
+  margin: 10px;
+  display: flex;
+}
+
+.battleship-container-vertical {
+  width: 40px;
+  height: 160px;
+  background-color: turquoise;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carrier-container {
+  width: 200px;
+  height: 40px;
+  background-color: seagreen;
+  margin: 10px;
+  display: flex;
+}
+
+.carrier-container-vertical {
+  width: 40px;
+  height: 200px;
+  background-color: seagreen;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ship div {
+  width: 40px;
+  height: 40px;
+}
+
+.destroyer {
+  background-color: coral;
+}
+
+.submarine {
+  background-color: lightpink;
+}
+
+.cruiser {
+  background-color: orchid;
+}
+
+.battleship {
+  background-color: turquoise;
+}
+
+.carrier {
+  background-color: seagreen;
+}
+
+.boom {
+  background-color: red;
+}
+
+.miss {
+  background-color: black;
+}
+
+.button-container {
+  text-align: center;
+}
+
+/* Hidden ship class */
+.hidden {
+  background-color: lightcoral;
+}
+
+
+button {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  background-color: #3498db;
+  color: white;
+}
+
+.button-container {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 29px;
+}
+
+button#start {
+  margin-right: 10px;
+}
+
+button#connect {
+  background-color: #e74c3c;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#whose-go {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  padding-right: 225px;
+  padding-left: 225px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+#whose-go.winner {
+  color: #00ff00;
+}
+
+#whose-go.loser {
+  color: #ff0000;
+}
+
+#player-info,
+#computer-info {
+  font-family: 'Arial, sans-serif';
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#player-info {
+  top: 170px;
+  left: 125px;
+}
+
+#computer-info {
+  top: 220px;
+  left: 125px;
+}
+
+.connected, .ready {
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.connected span, .ready span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: red;
+}
+
+.connected .green, .ready .green {
+  background: green;
+}
+
+.player-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player {
+  padding: 15px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.player .connected,
+.player .ready {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.connected span,
+.ready span {
+  margin-left: 8px;
+}
+
+.container,
+.grid-display,
+h1,
+h3 {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #1abc9c;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1abc9c;
+}
+
+#restart {
+  display: block;
+  margin: 0 auto;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
